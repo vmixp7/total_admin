@@ -1,4 +1,4 @@
-CREATE TABLE fu_promotions (
+CREATE TABLE total_promotions (
   id INT AUTO_INCREMENT PRIMARY KEY,
   data TEXT NOT NULL,
   createtime DATE NOT NULL,

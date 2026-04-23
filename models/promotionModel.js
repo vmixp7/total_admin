@@ -2,162 +2,165 @@ import db from "../config/db.js";
 
 // 格式化日期为 YYYY-MM-DD
 const formatDate = (date) => {
-    if (!date) return '';
-    const d = new Date(date);
-    const year = d.getFullYear();
-    const month = String(d.getMonth() + 1).padStart(2, '0');
-    const day = String(d.getDate()).padStart(2, '0');
-    return `${year}-${month}-${day}`;
+  if (!date) return "";
+  const d = new Date(date);
+  const year = d.getFullYear();
+  const month = String(d.getMonth() + 1).padStart(2, "0");
+  const day = String(d.getDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
 };
 
 const PromotionModel = {
-    // 获取所有促销信息
-    getAll: () => {
-        return new Promise((resolve, reject) => {
-            db.query(
-                'SELECT id, data as message, createtime as date, pdf FROM fu_promotions ORDER BY id DESC',
-                (err, results) => {
-                    if (err) reject(err);
-                    else {
-                        // 格式化日期
-                        const formattedResults = results.map(row => ({
-                            ...row,
-                            date: formatDate(row.date)
-                        }));
-                        resolve(formattedResults);
-                    }
-                }
-            );
-        });
-    },
+  // 获取所有促销信息
+  getAll: () => {
+    return new Promise((resolve, reject) => {
+      db.query(
+        "SELECT id, data as message, createtime as date, pdf FROM total_promotions ORDER BY id DESC",
+        (err, results) => {
+          if (err) reject(err);
+          else {
+            // 格式化日期
+            const formattedResults = results.map((row) => ({
+              ...row,
+              date: formatDate(row.date),
+            }));
+            resolve(formattedResults);
+          }
+        },
+      );
+    });
+  },
 
-    // 根据 ID 获取单个促销信息
-    getById: (id) => {
-        return new Promise((resolve, reject) => {
-            db.query(
-                'SELECT id, data as message, createtime as date, pdf FROM fu_promotions WHERE id = ?',
-                [id],
-                (err, results) => {
-                    if (err) reject(err);
-                    else {
-                        if (results[0]) {
-                            results[0].date = formatDate(results[0].date);
-                        }
-                        resolve(results[0]);
-                    }
-                }
-            );
-        });
-    },
-
-    // 新增促销信息
-    create: (message, date, pdf) => {
-        return new Promise((resolve, reject) => {
-            db.query(
-                'INSERT INTO fu_promotions (data, createtime, pdf) VALUES (?, ?, ?)',
-                [message, date, pdf || ''],
-                (err, results) => {
-                    if (err) reject(err);
-                    else resolve(results);
-                }
-            );
-        });
-    },
-
-    // 更新促销信息
-    update: (id, message, date, pdf) => {
-        return new Promise((resolve, reject) => {
-            let query = 'UPDATE fu_promotions SET data = ?, createtime = ?';
-            let params = [message, date];
-
-            if (pdf) {
-                query += ', pdf = ?';
-                params.push(pdf);
+  // 根据 ID 获取单个促销信息
+  getById: (id) => {
+    return new Promise((resolve, reject) => {
+      db.query(
+        "SELECT id, data as message, createtime as date, pdf FROM total_promotions WHERE id = ?",
+        [id],
+        (err, results) => {
+          if (err) reject(err);
+          else {
+            if (results[0]) {
+              results[0].date = formatDate(results[0].date);
             }
+            resolve(results[0]);
+          }
+        },
+      );
+    });
+  },
 
-            query += ' WHERE id = ?';
-            params.push(id);
+  // 新增促销信息
+  create: (message, date, pdf) => {
+    return new Promise((resolve, reject) => {
+      db.query(
+        "INSERT INTO total_promotions (data, createtime, pdf) VALUES (?, ?, ?)",
+        [message, date, pdf || ""],
+        (err, results) => {
+          if (err) reject(err);
+          else resolve(results);
+        },
+      );
+    });
+  },
 
-            db.query(query, params, (err, results) => {
-                if (err) reject(err);
-                else resolve(results);
-            });
-        });
-    },
+  // 更新促销信息
+  update: (id, message, date, pdf) => {
+    return new Promise((resolve, reject) => {
+      let query = "UPDATE total_promotions SET data = ?, createtime = ?";
+      let params = [message, date];
 
-    // 删除促销信息
-    delete: (id) => {
-        return new Promise((resolve, reject) => {
-            db.query(
-                'DELETE FROM fu_promotions WHERE id = ?',
-                [id],
-                (err, results) => {
-                    if (err) reject(err);
-                    else resolve(results);
-                }
-            );
-        });
-    },
-    // 獲取首頁新聞（限制數量）
-    getLimit: (limit) => {
-        return new Promise((resolve, reject) => {
-            db.query(
-                `SELECT * FROM fu_promotions ORDER BY id DESC limit ${limit}`,
-                (err, results) => {
-                    if (err) reject(err);
-                    else {
-                        // 格式化日期
-                        const formattedResults = results.map(row => ({
-                            ...row,
-                            date: formatDate(row.createtime)
-                        }));
-                        resolve(formattedResults);
-                    }
-                }
-            );
-        });
-    },
-    // 獲取促銷信息分頁數據
-    getPaginated: (page, limit) => {
-        return new Promise((resolve, reject) => {
-            const offset = (page - 1) * limit;
+      if (pdf) {
+        query += ", pdf = ?";
+        params.push(pdf);
+      }
 
-            // 獲取總數
-            db.query('SELECT COUNT(*) as total FROM fu_promotions', (err, countResults) => {
-                if (err) {
-                    reject(err);
-                    return;
-                }
+      query += " WHERE id = ?";
+      params.push(id);
 
-                const total = countResults[0].total;
-                const totalPages = Math.ceil(total / limit);
+      db.query(query, params, (err, results) => {
+        if (err) reject(err);
+        else resolve(results);
+      });
+    });
+  },
 
-                // 獲取分頁數據
-                db.query(
-                    `SELECT id, data as message, createtime as date, pdf FROM fu_promotions ORDER BY id DESC LIMIT ${limit} OFFSET ${offset}`,
-                    (err, results) => {
-                        if (err) reject(err);
-                        else {
-                            // 格式化日期
-                            const formattedResults = results.map(row => ({
-                                ...row,
-                                date: formatDate(row.date)
-                            }));
-                            resolve({
-                                data: formattedResults,
-                                pagination: {
-                                    currentPage: page,
-                                    totalPages: totalPages,
-                                    totalItems: total,
-                                    itemsPerPage: limit
-                                }
-                            });
-                        }
-                    }
-                );
-            });
-        });
-    }
+  // 删除促销信息
+  delete: (id) => {
+    return new Promise((resolve, reject) => {
+      db.query(
+        "DELETE FROM total_promotions WHERE id = ?",
+        [id],
+        (err, results) => {
+          if (err) reject(err);
+          else resolve(results);
+        },
+      );
+    });
+  },
+  // 獲取首頁新聞（限制數量）
+  getLimit: (limit) => {
+    return new Promise((resolve, reject) => {
+      db.query(
+        `SELECT * FROM total_promotions ORDER BY id DESC limit ${limit}`,
+        (err, results) => {
+          if (err) reject(err);
+          else {
+            // 格式化日期
+            const formattedResults = results.map((row) => ({
+              ...row,
+              date: formatDate(row.createtime),
+            }));
+            resolve(formattedResults);
+          }
+        },
+      );
+    });
+  },
+  // 獲取促銷信息分頁數據
+  getPaginated: (page, limit) => {
+    return new Promise((resolve, reject) => {
+      const offset = (page - 1) * limit;
+
+      // 獲取總數
+      db.query(
+        "SELECT COUNT(*) as total FROM total_promotions",
+        (err, countResults) => {
+          if (err) {
+            reject(err);
+            return;
+          }
+
+          const total = countResults[0].total;
+          const totalPages = Math.ceil(total / limit);
+
+          // 獲取分頁數據
+          db.query(
+            `SELECT id, data as message, createtime as date, pdf FROM total_promotions ORDER BY id DESC LIMIT ${limit} OFFSET ${offset}`,
+            (err, results) => {
+              if (err) reject(err);
+              else {
+                // 格式化日期
+                const formattedResults = results.map((row) => ({
+                  ...row,
+                  date: formatDate(row.date),
+                }));
+                resolve({
+                  data: formattedResults,
+                  pagination: {
+                    currentPage: page,
+                    totalPages: totalPages,
+                    totalItems: total,
+                    itemsPerPage: limit,
+                  },
+                });
+              }
+            },
+          );
+        },
+      );
+    });
+  },
 };
 
 export default PromotionModel;
