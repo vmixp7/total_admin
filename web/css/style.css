@@ -291,7 +291,7 @@ html {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(12, 77, 255, 0.85);
+  background: rgba(231, 0, 0, 0.85);
   color: #fff;
   padding: 38px 60px 38px 38px;
   z-index: 10;
@@ -381,7 +381,7 @@ html {
 
 .formosalube-header .right-menu .navbar-nav {
   display: flex;
-  gap: 45px;
+  gap: 20px;
   align-items: center;
   justify-content: left;
   margin-left: 10px;
@@ -478,14 +478,14 @@ html {
 }
 
 .megamenu .left-item h4 {
-  color: #3559f6;
+  color: #0098e3;
   font-size: 20px;
   padding: 20px 0 10px 0;
 }
 
 .megamenu .left-item h4 span {
   padding-left: 20px;
-  border-left: 1px solid #3559f6;
+  border-left: 1px solid #0098e3;
 }
 
 .megamenu .left-item p {
@@ -773,11 +773,11 @@ html {
 
 .formosalube-container .news-cont .aNew .text-info p .f-ss {
   font-size: 13px;
-  color: #3559f6;
+  color: #0098e3;
 }
 
 .formosalube-container .news-cont .aNew .text-info .day {
-  color: #3559f6;
+  color: #0098e3;
 }
 
 .formosalube-container .news-cont .aNew .more {
@@ -795,7 +795,7 @@ html {
 
 .formosalube-container .news-cont .newList {
   flex: 1;
-  background-color: #3559f6;
+  background-color: #0098e3;
   border-radius: 10px;
   padding: 25px 20px;
   display: flex;
@@ -1073,7 +1073,7 @@ html {
 
 .formosalube-container .support-cont .newList {
   flex: 1;
-  background-color: #3559f6;
+  background-color: #0098e3;
   border-radius: 10px;
   padding: 25px 20px;
   display: flex;
@@ -1204,7 +1204,7 @@ html {
 
 .formosalube-container .service-locations .aLocations .text-info p .f-ss {
   font-size: 13px;
-  color: #3559f6;
+  color: #0098e3;
 }
 
 .formosalube-container .service-locations .aLocations .text-info .more {
@@ -1310,7 +1310,7 @@ html {
 .formosalube-container .qa-cont .text p.date,
 .formosalube-container .newslist-cont .text p.date {
   font-size: 13px;
-  color: #3559f6;
+  color: #0098e3;
   padding-bottom: 5px;
 }
 
@@ -1331,7 +1331,7 @@ html {
 
 .formosalube-container .promotions-cont .text p.date {
   font-size: 13px;
-  color: #3559f6;
+  color: #0098e3;
   padding-bottom: 10px;
 }
 
@@ -1389,7 +1389,7 @@ html {
 
 .formosalube-container .service-map .aLocations .text-info p .f-ss {
   font-size: 13px;
-  color: #3559f6;
+  color: #0098e3;
 }
 
 @media (max-width: 1200px) {
@@ -1434,7 +1434,7 @@ html {
 }
 
 .formosalube-container .contact-cont h2 .must {
-  color: #3559f6;
+  color: #0098e3;
   font-size: 14px;
 }
 
@@ -1474,7 +1474,7 @@ html {
 }
 
 .formosalube-container .contact-cont form fieldset .start {
-  color: #3559f6;
+  color: #0098e3;
   font-size: 14px;
 }
 
@@ -1527,8 +1527,8 @@ html {
   padding: 10px 20px;
   border-radius: 50px;
   min-width: 140px;
-  border: 1px solid #3559f6;
-  color: #3559f6;
+  border: 1px solid #0098e3;
+  color: #0098e3;
   font-size: 16px;
   background-color: transparent;
 }
@@ -1538,7 +1538,7 @@ html {
 }
 
 .formosalube-container .contact-cont .bottom-btn .btn.btn_save {
-  background-color: #3559f6;
+  background-color: #0098e3;
   color: #fff;
 }
 

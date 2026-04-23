@@ -90,7 +90,7 @@ const EmailController = {
 
       // 郵件選項
       const mailOptions = {
-        from: "林口興業福斯官網",
+        from: "林口興業道達爾官網",
         to: "vcnt.chang@gmail.com, vmixp7@gmail.com",
         subject: subjectName,
         text: mailContent,

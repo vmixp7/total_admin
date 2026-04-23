@@ -297,6 +297,8 @@ ul.links li a::before,
     line-height: normal;
     display: inline-block;
     margin-top: -5px;
+    white-space: normal;
+    word-break: break-word;
 }
 
 .menu-item li a {
@@ -476,7 +478,9 @@ ul.links li a::before,
     font-size: 16px;
     padding: 0 0 0 0.5rem;
     line-height: 40px;
-    display: inline;
+    display: inline-block;
+    white-space: normal;
+    word-break: break-word;
     transition: .5s ease-in;
 }
 

@@ -1,9 +1,9 @@
 const bannerTexts = [
-  "德國福斯FUCHS<br>原廠推薦<span>商用重車潤滑油</span>",
-  "德國福斯FUCHS<br>先進科技<span>金屬加工潤滑油</span>",
-  "德國福斯FUCHS<br>超高性能<span>工程機具潤滑油</span>",
-  "德國福斯FUCHS<br>全球獨創<span>XTL極限潤滑科技</span>",
-  "德國福斯FUCHS<br>眾多認證<span>農機專用潤滑油</span>",
+  "道達爾能源<br>全球<span>前四大石油集團</span>",
+  "道達爾能源<br>原廠推薦<span>商用車潤滑油</span>",
+  "道達爾能源<br>原廠指定<span>工程機具潤滑油</span>",
+  "道達爾能源<br>卓越性能<span>工業用潤滑油</span>",
+  "道達爾能源<br>品質出眾<span>眾多設備商推薦</span>",
 ];
 
 const menuData = {
@@ -11,289 +11,206 @@ const menuData = {
     title: "產品",
     sections: [
       {
-        title: "產品系列",
+        title: "汽車用潤滑油",
         items: [
           {
-            name: "汽車潤滑油",
-            url: "https://www.fuchs.com/sea/tw/products/product-program/automotive-lubricants/",
+            name: "汽車用潤滑油型錄下載",
+            url: "https://dxm.content-center.totalenergies.com/api/wedia/dam/variation/xysh7dg731ta77a3g9bf6axmie/original,default?hash=gyhn6cb1fh3dyctiryauyqttgh7depo&dxm_cors_orign=76ABE9E30D5586637AC358998F93E703&download=true",
           },
           {
-            name: "工業潤滑油",
-            url: "https://www.fuchs.com/sea/tw/products/product-program/industrial-lubricants/",
+            name: "線上產品型錄",
+            url: "https://lubricants.catalog.totalenergies.com/catalog-tw/zh_TW?marketsegment=8259582ce8f9e88943e95aa9e44797bf",
           },
           {
-            name: "潤滑脂",
-            url: "https://www.fuchs.com/sea/tw/products/product-program/lubricating-greases/",
-          },
-          {
-            name: "金屬加工潤滑劑",
-            url: "https://www.fuchs.com/sea/tw/products/product-program/metal-processing-lubricants/",
-          },
-          {
-            name: "特殊應用潤滑劑",
-            url: "https://www.fuchs.com/sea/tw/products/product-program/special-application-lubricants/",
-          },
-          {
-            name: "服務",
-            url: "https://www.fuchs.com/sea/tw/products/product-program/services/",
+            name: "ART 延遲老化技術",
+            url: "https://totalenergies.tw/products/automotive-lubricants/Quartz-introduction/Age-Resistance-Technology",
           },
         ],
       },
       {
-        title: "服務連結",
+        title: "摩托車用潤滑油",
         items: [
           {
-            name: "油選擇器",
-            url: "https://fuchs-eu.lubricantadvisor.com/default.aspx?lang=eng",
+            name: "摩托車用潤滑油型錄下載",
+            url: "https://dxm.content-center.totalenergies.com/api/wedia/dam/variation/xysh7dg731ta7t81eua5zent8r/original,default?hash=gyhn6cb1fh3dyctiryauyqtt8r7dnca&dxm_cors_orign=76ABE9E30D5586637AC358998F93E703&download=true",
           },
           {
-            name: "產品搜尋",
-            url: "https://www.fuchs.com/sea/tw/products/service-links/product-finder/",
+            name: "線上產品型錄",
+            url: "https://lubricants.catalog.totalenergies.com/catalog-tw/zh_TW?marketsegment=c4f5496f973fde81791e93964c57574b",
+          },
+        ],
+      },
+      {
+        title: "重型車輛潤滑油",
+        items: [
+          {
+            name: "重車用潤滑油型錄下載",
+            url: "https://dxm.content-center.totalenergies.com/api/wedia/dam/variation/xysh7dg731ta7mpja59h6uc5jh/original,default?hash=gyhn6cb1fh3dyctiryauyqtt8y7dgqy&dxm_cors_orign=76ABE9E30D5586637AC358998F93E703&download=true",
           },
           {
-            name: "產品助理",
-            url: "https://www.fuchs.com/sea/tw/products/service-links/product-assistant/",
+            name: "線上產品型錄",
+            url: "https://lubricants.catalog.totalenergies.com/catalog-tw/zh_TW?marketsegment=83a9b714f0ea09668e394bae597e69b1",
+          },
+        ],
+      },
+      {
+        title: "工業用潤滑油",
+        items: [
+          {
+            name: "產品系列型錄下載",
+            url: "https://totalenergies.tw/products/industrial-lubricants/introduction",
           },
           {
-            name: "分銷商或經銷商搜尋",
-            url: "https://www.fuchs.com/sea/tw/products/service-links/distributor-or-dealer-search/",
+            name: "線上產品型錄",
+            url: "https://totalenergies.tw/products/industrial-lubricants/brochure-download",
+          },
+        ],
+      },
+      {
+        title: "",
+        items: [
+          {
+            name: "線上產品總覽",
+            url: "https://lubricants.catalog.totalenergies.com/catalog-tw/zh_TW",
+          },
+          {
+            name: "車輛用添加劑",
+            url: "https://totalenergies.tw/products/fuel-additives",
+          },
+          {
+            name: "車輛用清潔劑",
+            url: "https://totalenergies.tw/products/car-care",
+          },
+          {
+            name: "LubAnac分析比較",
+            url: "https://totalenergies.tw/products/LubAnac",
+          },
+          {
+            name: "Lubconsult",
+            url: "https://lubconsult.totalenergies.com/TW-LCR-TotalEnergiesELF",
           },
         ],
       },
     ],
   },
   industries: {
-    title: "行業",
+    title: "道達爾能源講堂",
     sections: [
       {
-        title: "A - D",
+        title: "機油專家的建議",
         items: [
           {
-            name: "農業和林業",
-            url: "https://www.fuchs.com/sea/tw/industries/a-d/agriculture-and-forestry/",
+            name: "避免引擎損壞的 7 項秘訣",
+            url: "https://totalenergies.tw/lubricant-zone/expert-advice/tips-to-protect-engine",
           },
           {
-            name: "汽車",
-            url: "https://www.fuchs.com/sea/tw/industries/a-d/automotive/",
+            name: "汽車機油的運作原理",
+            url: "https://totalenergies.tw/lubricant-zone/expert-advice/How-oil-motor-works",
           },
           {
-            name: "鑄造",
-            url: "https://www.fuchs.com/sea/tw/industries/a-d/casting/",
+            name: "什麼是引擎機油的黏度等級？",
+            url: "https://totalenergies.tw/lubricant-zone/expert-advice/engine-oil-viscosity",
           },
           {
-            name: "水泥、石灰和石膏",
-            url: "https://www.fuchs.com/sea/tw/industries/a-d/cement-lime-and-gypsum/",
+            name: "機油是什麼",
+            url: "https://totalenergies.tw/lubricant-zone/expert-advice/What-is-lubricant",
           },
           {
-            name: "工程機械",
-            url: "https://www.fuchs.com/sea/tw/industries/a-d/construction/",
-          },
-          {
-            name: "消費者和售後市場",
-            url: "https://www.fuchs.com/sea/tw/industries/a-d/consumer-and-aftermarket/",
+            name: "如何選擇適合的機油",
+            url: "https://totalenergies.tw/lubricant-zone/expert-advice/How-to-choose-the-right-lubricant",
           },
         ],
       },
       {
-        title: "F - M",
+        title: "新創科技",
         items: [
           {
-            name: "食品和飲料",
-            url: "https://www.fuchs.com/sea/tw/industries/f-m/food-and-beverages/",
+            name: "TotalEnergies 創新科技",
+            url: "https://totalenergies.tw/lubricant-zone/innovation/totalenergies-innovation",
           },
           {
-            name: "鍛造",
-            url: "https://www.fuchs.com/sea/tw/industries/f-m/forging/",
-          },
-          {
-            name: "玻璃",
-            url: "https://www.fuchs.com/sea/tw/industries/f-m/glass/",
-          },
-          {
-            name: "機械和設備",
-            url: "https://www.fuchs.com/sea/tw/industries/f-m/machinery-and-equipment/",
-          },
-          {
-            name: "金屬加工",
-            url: "https://www.fuchs.com/sea/tw/industries/f-m/metal-processing/",
-          },
-          {
-            name: "採礦和勘探",
-            url: "https://www.fuchs.com/sea/tw/industries/f-m/mining-and-exploration/",
+            name: "TotalEnergies 道達爾能源 — 永續能源解決方案的領先者",
+            url: "https://totalenergies.tw/lubricant-zone/innovation/totalenergies-front-row-sustainable-energy-solutions",
           },
         ],
       },
       {
-        title: "N - Z",
+        title: "汽車適用快馳油品介紹",
         items: [
           {
-            name: "發電",
-            url: "https://www.fuchs.com/sea/tw/industries/n-z/power-generation/",
+            name: "Quartz 9000 Future GF6 5W30",
+            url: "https://totalenergies.tw/lubricant-zone/innovation/gf6",
           },
           {
-            name: "鋼和金屬",
-            url: "https://www.fuchs.com/sea/tw/industries/n-z/steels-and-metals/",
+            name: "汽車用潤滑油指南",
+            url: "https://totalenergies.tw/lubricant-zone/lubricant-products/lubricants-for-car/guide-for-car-lubricant",
           },
           {
-            name: "運輸",
-            url: "https://www.fuchs.com/sea/tw/industries/n-z/transport/",
+            name: "斷開渦輪引擎公主病",
+            url: "https://totalenergies.tw/lubricant-zone/lubricant-products/lubricants-for-car/%E6%96%B7%E9%96%8B%E6%B8%A6%E8%BC%AA%E5%BC%95%E6%93%8E%E5%85%AC%E4%B8%BB%E7%97%85",
           },
           {
-            name: "其他行業",
-            url: "https://www.fuchs.com/sea/tw/industries/n-z/other-industries/",
+            name: "國產日系車適用油款介紹",
+            url: "https://totalenergies.tw/lubricant-zone/lubricant-products/lubricants-for-car/lubricant-for-asian-car",
+          },
+          {
+            name: "Quartz Ineo MC3 5W30",
+            url: "https://totalenergies.tw/innovation/QUARTZ-INEO-MC3-5W30",
+          },
+          {
+            name: "歐日系車體東西軍",
+            url: "https://totalenergies.tw/lubricant-zone/lubricant-products/lubricants-for-car/%E6%AD%90%E6%97%A5%E7%B3%BB%E8%BB%8A%E9%AB%94%E6%9D%B1%E8%A5%BF%E8%BB%8D",
+          },
+          {
+            name: "配好配滿你的油電愛車",
+            url: "https://totalenergies.tw/lubricant-zone/lubricant-products/lubricants-for-car/%E9%85%8D%E5%A5%BD%E9%85%8D%E6%BB%BF%E4%BD%A0%E7%9A%84%E6%B2%B9%E9%9B%BB%E6%84%9B%E8%BB%8A",
+          },
+          {
+            name: "查看汽車用潤滑油產品",
+            url: "https://lubricants.catalog.totalenergies.com/catalog-tw/zh_TW?marketsegment=8259582ce8f9e88943e95aa9e44797bf",
+          },
+        ],
+      },
+      {
+        title: "機車適用動馳油品介紹",
+        items: [
+          {
+            name: "機車適用油品介紹 馴服 4T 機車的最佳情人",
+            url: "https://totalenergies.tw/lubricant-zone/lubricant-products/lubricants-for-motorcycle/%E9%A6%B4%E6%9C%8D4T%E6%A9%9F%E8%BB%8A%E7%9A%84%E6%9C%80%E4%BD%B3%E6%83%85%E4%BA%BA.html",
+          },
+          {
+            name: "查看摩托車用潤滑油產品",
+            url: "https://lubricants.catalog.totalenergies.com/catalog-tw/zh_TW?marketsegment=c4f5496f973fde81791e93964c57574b",
           },
         ],
       },
     ],
   },
   brands: {
-    title: "品牌故事",
+    title: "道達爾能源最新消息",
     sections: [
       {
-        title: "A - K",
+        title: "",
         items: [
           {
-            name: "AGRIFARM",
-            url: "https://www.fuchs.com/sea/tw/brands/a-k/agrifarm/",
+            name: "搜尋最新消息",
+            url: "https://totalenergies.tw/news/search",
           },
           {
-            name: "ANTICORIT",
-            url: "https://www.fuchs.com/sea/tw/brands/a-k/anticorit/",
+            name: "活動快訊",
+            url: "https://totalenergies.tw/news/promotion-news",
           },
           {
-            name: "CARBAFLO",
-            url: "https://www.fuchs.com/sea/tw/brands/a-k/carbaflo/",
+            name: "道達爾能源旗艦店開幕新聞",
+            url: "https://totalenergies.tw/news/flagship-store-news",
           },
           {
-            name: "CASSIDA",
-            url: "https://www.fuchs.com/sea/tw/brands/a-k/cassida/",
+            name: "公司新聞",
+            url: "https://totalenergies.tw/news/corporate-news",
           },
           {
-            name: "CEPLATTYN",
-            url: "https://www.fuchs.com/sea/tw/brands/a-k/ceplattyn/",
-          },
-          {
-            name: "CHEMPLEX",
-            url: "https://www.fuchs.com/sea/tw/brands/a-k/chemplex/",
-          },
-          {
-            name: "ECOCOOL",
-            url: "https://www.fuchs.com/sea/tw/brands/a-k/ecocool/",
-          },
-          {
-            name: "ECOCUT",
-            url: "https://www.fuchs.com/sea/tw/brands/a-k/ecocut/",
-          },
-          {
-            name: "GEARMASTER",
-            url: "https://www.fuchs.com/sea/tw/brands/a-k/gearmaster/",
-          },
-          {
-            name: "GLEITMO",
-            url: "https://www.fuchs.com/sea/tw/brands/a-k/gleitmo/",
-          },
-        ],
-      },
-      {
-        title: "L - R",
-        items: [
-          {
-            name: "LAGERMEISTER",
-            url: "https://www.fuchs.com/sea/tw/brands/l-r/lagermeister/",
-          },
-          {
-            name: "LOCOLUB",
-            url: "https://www.fuchs.com/sea/tw/brands/l-r/locolub/",
-          },
-          {
-            name: "LUBRODAL",
-            url: "https://www.fuchs.com/sea/tw/brands/l-r/lubrodal/",
-          },
-          {
-            name: "MAINTAIN",
-            url: "https://www.fuchs.com/sea/tw/brands/l-r/maintain/",
-          },
-          {
-            name: "MOLYPAUL",
-            url: "https://www.fuchs.com/sea/tw/brands/l-r/molypaul/",
-          },
-          {
-            name: "PENTOSIN",
-            url: "https://www.fuchs.com/sea/tw/brands/l-r/pentosin/",
-          },
-          {
-            name: "PLANTO",
-            url: "https://www.fuchs.com/sea/tw/brands/l-r/planto/",
-          },
-          {
-            name: "RENEP",
-            url: "https://www.fuchs.com/sea/tw/brands/l-r/renep/",
-          },
-          {
-            name: "RENISO",
-            url: "https://www.fuchs.com/sea/tw/brands/l-r/reniso/",
-          },
-          {
-            name: "RENOCLEAN",
-            url: "https://www.fuchs.com/sea/tw/brands/l-r/renoclean/",
-          },
-          {
-            name: "RENOFORM",
-            url: "https://www.fuchs.com/sea/tw/brands/l-r/renoform/",
-          },
-          {
-            name: "RENOLIN",
-            url: "https://www.fuchs.com/sea/tw/brands/l-r/renolin/",
-          },
-          {
-            name: "RENOLIT",
-            url: "https://www.fuchs.com/sea/tw/brands/l-r/renolit/",
-          },
-        ],
-      },
-      {
-        title: "S - Z",
-        items: [
-          {
-            name: "SILKOLENE",
-            url: "https://www.fuchs.com/sea/tw/brands/s-z/silkolene/",
-          },
-          { name: "SOK", url: "https://www.fuchs.com/sea/tw/brands/s-z/sok/" },
-          {
-            name: "SOLCENIC",
-            url: "https://www.fuchs.com/sea/tw/brands/s-z/solcenic/",
-          },
-          {
-            name: "STABYL",
-            url: "https://www.fuchs.com/sea/tw/brands/s-z/stabyl/",
-          },
-          {
-            name: "STABYLAN",
-            url: "https://www.fuchs.com/sea/tw/brands/s-z/stabylan/",
-          },
-          {
-            name: "THERMISOL",
-            url: "https://www.fuchs.com/sea/tw/brands/s-z/thermisol/",
-          },
-          {
-            name: "TITAN",
-            url: "https://www.fuchs.com/sea/tw/brands/s-z/titan/",
-          },
-          {
-            name: "TRENOIL",
-            url: "https://www.fuchs.com/sea/tw/brands/s-z/trenoil/",
-          },
-          {
-            name: "URETHYN",
-            url: "https://www.fuchs.com/sea/tw/brands/s-z/urethyn/",
-          },
-          {
-            name: "VITROLIS",
-            url: "https://www.fuchs.com/sea/tw/brands/s-z/vitrolis/",
-          },
-          {
-            name: "WISURA",
-            url: "https://www.fuchs.com/sea/tw/brands/s-z/wisura/",
+            name: "賽事報導",
+            url: "https://totalenergies.tw/news/motorsport-news",
           },
         ],
       },
@@ -453,7 +370,7 @@ function loadBanners() {
   const banners = `
       <div class="swiper-slide">
         <img
-          src="images/photo/Shutterstock_1610700505.jpg"
+          src="images/photo/banner1.jpg"
           width="100%"
           loading="1"
           alt=""
@@ -461,7 +378,7 @@ function loadBanners() {
       </div>
       <div class="swiper-slide">
         <img
-          src="images/photo/banner_2.jpg"
+          src="images/photo/banner2.jpg"
           width="100%"
           loading="1"
           alt=""
@@ -469,7 +386,7 @@ function loadBanners() {
       </div>
       <div class="swiper-slide">
         <img
-          src="images/photo/Excavator bulldozer in sandpit with raised bucket over blue cloudscape sky_shutterstock_excavatorSandpit_high.jpg"
+          src="images/photo/banner3.jpg"
           width="100%"
           loading="1"
           alt=""
@@ -477,7 +394,7 @@ function loadBanners() {
       </div>
       <div class="swiper-slide">
         <img
-          src="images/photo/Oilrunner_II.jpg"
+          src="images/photo/banner4.jpg"
           width="100%"
           loading="1"
           alt=""
@@ -485,7 +402,7 @@ function loadBanners() {
       </div>
       <div class="swiper-slide">
         <img
-          src="images/photo/Shutterstock_684981595.jpg"
+          src="images/photo/banner5.jpg"
           width="100%"
           loading="1"
           alt=""

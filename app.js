@@ -10,7 +10,6 @@ const app = express();
 // 配置 CORS
 app.use(
   cors({
-    // origin: ["http://fuchslube.com.tw"],
     origin: "*",
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
@@ -35,6 +34,6 @@ app.use(
 
 app.use("/", route);
 
-app.listen(5000, () =>
-  console.log("🚀 Server running at http://localhost:5000"),
+app.listen(6000, () =>
+  console.log("🚀 Server running at http://localhost:6000"),
 );

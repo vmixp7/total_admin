@@ -1,1 +1,1 @@
-* Fuchs Admin
+- Total Admin
