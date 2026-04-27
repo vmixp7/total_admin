@@ -386,7 +386,7 @@ function loadBanners() {
       </div>
       <div class="swiper-slide">
         <img
-          src="images/photo/banner3.jpg"
+          src="images/photo/banner3_v1.jpg"
           width="100%"
           loading="1"
           alt=""
