@@ -381,7 +381,7 @@ html {
 
 .formosalube-header .right-menu .navbar-nav {
   display: flex;
-  gap: 20px;
+  gap: 10px;
   align-items: center;
   justify-content: left;
   margin-left: 10px;
@@ -551,12 +551,8 @@ html {
 }
 
 @media (max-width: 1580px) {
-  .formosalube-header .right-menu .navbar-nav {
-    gap: 30px;
-  }
-
   .formosalube-header p.slogan {
-    margin-left: 30px;
+    margin-left: 0px;
   }
 }
 
@@ -1798,6 +1794,21 @@ html {
 
   .formosalube-footer .copy-right-text p {
     margin: 0px 0px;
+  }
+}
+
+@media (max-width: 1580px) {
+  .menu-item li a {
+    font-size: 17px;
+  }
+  .navbar-nav .nav-link {
+    font-size: 17px;
+  }
+  .formosalube-header p.slogan {
+    font-size: 20px;
+  }
+  .slogan_en {
+    font-size: 18px;
   }
 }
 

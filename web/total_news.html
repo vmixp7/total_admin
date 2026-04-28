@@ -180,37 +180,27 @@
         </section>
 
         <!-- 2 -->
-        <section class="info-content support-cont">
-          <div class="mbox">
-            <div class="aSupport1">
-              <div class="text-info content1">
-                <h3>用油推薦</h3>
-                <p></p>
+        <section class="info-content qa-cont">
+          <div
+            class="mbox"
+            style="flex-direction: row; align-items: flex-start"
+          >
+            <div class="megamenu" style="width: auto; flex: 0 0 380px">
+              <div
+                class="left-item"
+                id="brands-megamenu"
+                style="max-height: none"
+              >
+                <!-- 由 menu.js 動態生成 -->
               </div>
             </div>
-            <div class="aSupport1">
-              <div class="text-info content2">
-                <h3>用油監控</h3>
-                <p></p>
-              </div>
+            <div class="right-item" style="flex: 1; min-width: 0">
+              <img
+                src="images/total_news.jpg"
+                alt="道達爾能源最新消息"
+                style="width: 100%; height: auto"
+              />
             </div>
-          </div>
-          <div class="mbox">
-            <a class="aSupport2" href="seminar.html">
-              <div class="aSupport-photo">
-                <img src="images/ex_02.jpg" width="100%" loading="1" alt="" />
-              </div>
-              <div class="text-info">
-                <h3>廠內研討會</h3>
-                <p>
-                  我們樂於分享設備潤滑的相關知識，透由專業的潤滑工程師與客戶端的機保、研發、採購等相關部門人員進行面對面的技術研討，除了可以增加潤滑知識外，也可以針對廠內所面臨的用油問題進行探討與解決。<br />
-                  <br />若有研討會的需求，歡迎您隨時與我們聯繫。<span
-                    class="more"
-                    >了解更多</span
-                  >
-                </p>
-              </div>
-            </a>
           </div>
         </section>
       </main>
@@ -241,38 +231,3 @@
     <script src="js/script.js?v=17"></script>
   </body>
 </html>
-<script>
-  // 取得 contents 資料
-  $(document).ready(function () {
-    $.ajax({
-      url: BASE_URL + "/api/contents",
-      type: "GET",
-      dataType: "json",
-      success: function (data) {
-        const jobsDatas = data.filter((item) => item.item === "technology");
-        const jobsData = jobsDatas[0];
-        console.log("technology 資料:", jobsData);
-        $(".content1 p").html(jobsData.content1);
-        $(".content2 p").html(jobsData.content2);
-      },
-      error: function (xhr, status, error) {
-        console.error("取得 contents 失敗:", error);
-      },
-    });
-
-    $.ajax({
-      url: `${BASE_URL}/api/seminar?page=1`,
-      type: "GET",
-      dataType: "json",
-      success: function (response) {
-        console.log("seminar 資料:", response);
-        const fileName = response.data[0].startday;
-        var firstImg = `${FORMOSA_URL}/images/seminar/B${fileName}_01.jpg`;
-        $(".aSupport2 .aSupport-photo img").attr("src", firstImg);
-      },
-      error: function (xhr, status, error) {
-        console.error("取得 seminar 失敗:", error);
-      },
-    });
-  });
-</script>
