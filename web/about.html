@@ -6,7 +6,9 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
-    <title>林口興業有限公司：道達爾能源授權經銷商</title>
+    <title>
+      林口興業有限公司 : 法國道達爾能源TotalEnergies潤滑油授權經銷商
+    </title>
     <meta
       name="keywords"
       content="道達爾能源,oil,lube,total energies,林口興業,機油,潤滑油,汽車,機車,重車,工業,海運"
@@ -20,6 +22,7 @@
     <meta name="apple-mobile-web-app-title" content="林口興業" />
     <meta name="theme-color" content="#0d6efd" />
     <link rel="apple-touch-icon" href="images/phone_icon_v1.png" />
+    <link rel="icon" href="images/phone_icon_x96.png" type="image/png" />
     <link rel="manifest" href="js/manifest.json?v=1" />
     <link rel="stylesheet" href="css/style.css?v=25" />
     <!-- Pushy -->
@@ -344,6 +347,29 @@
     return formattedHtml;
   }
   $(document).ready(function () {
+    let version = new Date().getTime();
+
+    $(".photo-1 img").each(function () {
+      let src = $(this).attr("src");
+      // 避免重複加 ?
+      if (src.indexOf("?") === -1) {
+        $(this).attr("src", src + "?v=" + version);
+      } else {
+        $(this).attr("src", src + "&v=" + version);
+      }
+    });
+
+    $(".aLocations img").each(function () {
+      let src = $(this).attr("src");
+
+      // 避免重複加 ?
+      if (src.indexOf("?") === -1) {
+        $(this).attr("src", src + "?v=" + version);
+      } else {
+        $(this).attr("src", src + "&v=" + version);
+      }
+    });
+
     $.ajax({
       url: `${BASE_URL}/api/fuchs-about`,
       type: "GET",
